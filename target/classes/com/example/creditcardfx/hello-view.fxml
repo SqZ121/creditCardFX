@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="340.0" prefWidth="569.0" vgap="10.0"
+          xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.example.creditcardfx.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Text text="Card Number:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="5.0"
+          GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <AnchorPane prefHeight="0.0" prefWidth="41.0">
+        <children>
+            <ImageView fx:id="card_icon" fitHeight="26.0" fitWidth="114.0"
+                       pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@visa.png"/>
+                </image>
+            </ImageView>
+        </children>
+        </AnchorPane>
+        <TextField fx:id="text_num" prefHeight="26.0" prefWidth="380.0"
+                   GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+
+        </TextField>
+        <AnchorPane prefHeight="26.0" prefWidth="30.0">
+           <children>
+               <ImageView fx:id="checkBox" fitHeight="26.0" fitWidth="30.0"
+                          layoutX="4.0" pickOnBounds="true" preserveRatio="true">
+
+               </ImageView>
+           </children>
+        </AnchorPane>
+
+    </HBox>
+
+    <Text text="Expiration Date" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <Text text="CVV" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <TextField fx:id="text_expDate" promptText="mm/yyyy" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="text_cvv" promptText="XXX" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
